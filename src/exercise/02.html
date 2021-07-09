@@ -30,12 +30,11 @@
 
     const elementType = 'div';
     const elementProps = {className: 'container'};
-    const containerElement = React.createElement(
-      elementType,
-      elementProps,
+    const containerElement = React.createElement(elementType, elementProps, [
       spanHelloElement,
+      ' ',
       spanWorldElement,
-    );
+    ]);
     ReactDOM.render(containerElement, document.getElementById('root'));
   </script>
 </body>
