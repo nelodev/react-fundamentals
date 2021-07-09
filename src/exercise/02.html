@@ -21,20 +21,13 @@
     // 🐨 Please re-implement the regular document.createElement code above
     // with these React API calls
     // 💰 The example in the markdown file should be a good hint for you.
-    const spanType = 'span';
-    const helloProp = {children: 'Hello'};
-    const spanHelloElement = React.createElement(spanType, helloProp);
-
-    const worldProp = {children: 'World'};
-    const spanWorldElement = React.createElement(spanType, worldProp);
-
-    const elementType = 'div';
-    const elementProps = {className: 'container'};
-    const containerElement = React.createElement(elementType, elementProps, [
-      spanHelloElement,
-      ' ',
-      spanWorldElement,
-    ]);
+    const spanHelloElement = React.createElement('span', {}, 'Hello');
+    const spanWorldElement = React.createElement('span', {}, 'World');
+    const containerElement = React.createElement(
+      'div',
+      {className: 'container'},
+      [spanHelloElement, ' ', spanWorldElement],
+    );
     ReactDOM.render(containerElement, document.getElementById('root'));
   </script>
 </body>
